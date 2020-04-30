@@ -1,12 +1,8 @@
-package com.tyq.creation;
-
-import com.tyq.creation.prototype.manger.RunApp;
+package com.tyq.misc;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public abstract class Application {
