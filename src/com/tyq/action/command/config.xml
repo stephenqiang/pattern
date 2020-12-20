@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<config>
+    <className>com.tyq.action.command.HelpCommand</className>
+    <className>com.tyq.action.command.MinimizeCommand</className>
+</config>

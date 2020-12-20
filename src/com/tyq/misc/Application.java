@@ -1,26 +1,54 @@
 package com.tyq.misc;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
-public abstract class Application {
-    protected abstract void run();
+public class Application {
+    static class Animal {
+        public int getId() {
+            return id;
+        }
 
-    public static void main(String[] args) throws IOException {
+        public void setId(int id) {
+            this.id = id;
+        }
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
-        int sum = list.stream().map(x -> x*x).reduce((x,y) -> x + y).get();
-        System.out.println(sum);
+        private int id;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        private String name;
+
+        @Override
+        public String toString() {
+            return "Animal{" +
+                    "id=" + id +
+                    ", name='" + name + '\'' +
+                    '}';
+        }
+
+        public Animal(int id, String name) {
+            this.id = id;
+            this.name = name;
+        }
     }
 
-    public static void evaluate(List<Integer> list, Predicate<Integer> predicate) {
-        for(Integer n: list)  {
-            if(predicate.test(n)) {
-                System.out.println(n + " ");
-            }
-        }
+
+    public static void main(String[] args) throws IOException {
+        List<Animal> aniList = Arrays.asList(new Animal(1, "aaa"), new Animal(2, "bbb"), new Animal(3, "ccc"));
+        Map<Integer, Animal> res = aniList.stream().collect(Collectors.toMap(Animal::getId, animal -> animal));
+        System.out.println(res.get(3));
     }
 
 }
