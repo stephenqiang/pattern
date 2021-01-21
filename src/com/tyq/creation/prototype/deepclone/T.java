@@ -2,10 +2,9 @@ package com.tyq.creation.prototype.deepclone;
 
 import com.tyq.creation.Application;
 
-public class RunApp extends Application {
+public class T {
 
-    @Override
-    protected void run() {
+    public static void main(String[] args) {
         WeeklyLog log_previous, log_new = null;
         log_previous = new WeeklyLog(); //创建原型对象
 

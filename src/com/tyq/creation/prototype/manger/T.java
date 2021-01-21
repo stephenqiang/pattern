@@ -2,10 +2,9 @@ package com.tyq.creation.prototype.manger;
 
 import com.tyq.creation.Application;
 
-public class RunApp extends Application {
+public class T {
 
-    @Override
-    protected void run() {
+    public static void main(String[] args) {
         //获取原型管理器对象
         PrototypeManager pm = PrototypeManager.getPrototypeManage();
         OfficialDocument doc1, doc2, doc3, doc4;

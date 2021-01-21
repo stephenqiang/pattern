@@ -39,6 +39,14 @@ public class T {
         }
 
 
+/*
+        类适配器
+        class Adapter extends Adaptee implements Target {
+            public void request() {
+                specificRequest();
+            }
+        }*/
+
     }
 
 }

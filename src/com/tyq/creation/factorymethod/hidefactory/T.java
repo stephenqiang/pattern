@@ -2,6 +2,7 @@ package com.tyq.creation.factorymethod.hidefactory;
 
 public class T {
     public static void main(String[] args) {
+        //隐藏工厂
         LoggerFactory1 factory;
         //配置文件
         factory = new DatabaseLoggerFactory1();
